@@ -27,11 +27,12 @@ All indicators have been **defanged** to prevent accidental access (e.g., `[.]` 
 
 > From CASE-001 — `quotation.iso` attachment (20/41 VirusTotal detections)
 
-| Algorithm | Hash | Confidence |
-|---|---|---|
-| **SHA-256** | `75fdb848eac332b4ca7d88f497e7ba7ebbb9a798d825b28cf1f87b9d7149e87f` | 🔴 High |
-| **SHA-1** | `3fe45f8cd20cd7c63e55e3918dac1d3a0d7fb05a` | 🔴 High |
-| **MD5** | `6aef1d7f88e8aa450a0c604b4caee5ba` | 🔴 High |
+| Target | Algorithm | Hash | Confidence |
+|---|---|---|---|
+| Evidence File (`sample.eml`) | **SHA-256** | `a4961eed55d234b1a6c5a9016bd81c04c27b620dffcd49ad44a3c9c7cc796039` | 🟡 Contextual |
+| Attachment (`quotation.iso`) | **SHA-256** | `75fdb848eac332b4ca7d88f497e7ba7ebbb9a798d825b28cf1f87b9d7149e87f` | 🔴 High |
+| Attachment (`quotation.iso`) | **SHA-1** | `3fe45f8cd20cd7c63e55e3918dac1d3a0d7fb05a` | 🔴 High |
+| Attachment (`quotation.iso`) | **MD5** | `6aef1d7f88e8aa450a0c604b4caee5ba` | 🔴 High |
 
 **Recommended Actions:**
 - Block hashes at email gateway and endpoint protection

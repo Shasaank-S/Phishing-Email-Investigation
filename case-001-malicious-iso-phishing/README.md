@@ -89,9 +89,10 @@ The email delivered a 112 KB file named `quotation.iso`.
 <img src="screenshots/08-sha256-hash-generation.png" width="750" alt="SHA-256 hash generation terminal" />
 
 ### Cryptographic Hashes
-- **MD5:** `6aef1d7f88e8aa450a0c604b4caee5ba`
-- **SHA-1:** `3fe45f8cd20cd7c63e55e3918dac1d3a0d7fb05a`
-- **SHA-256:** `75fdb848eac332b4ca7d88f497e7ba7ebbb9a798d825b28cf1f87b9d7149e87f`
+- **Evidence File (`sample.eml`) SHA-256:** `a4961eed55d234b1a6c5a9016bd81c04c27b620dffcd49ad44a3c9c7cc796039`
+- **Attachment (`quotation.iso`) SHA-256:** `75fdb848eac332b4ca7d88f497e7ba7ebbb9a798d825b28cf1f87b9d7149e87f`
+- **Attachment (`quotation.iso`) SHA-1:** `3fe45f8cd20cd7c63e55e3918dac1d3a0d7fb05a`
+- **Attachment (`quotation.iso`) MD5:** `6aef1d7f88e8aa450a0c604b4caee5ba`
 
 ### Threat Intelligence & Static Reputation
 Querying the SHA-256 hash against VirusTotal yielded **20 out of 41 security vendor detections**, confirming the ISO contains a malicious Windows Trojan / Downloader executable.
