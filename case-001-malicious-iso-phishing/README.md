@@ -121,9 +121,9 @@ Querying both the raw `.eml` sample and extracted payload on VirusTotal yielded 
 
 <br>
 <img src="screenshots/13-sample-eml-virustotal-detection.png" width="750" alt="VirusTotal detection for sample.eml (33/61 vendors)" />
-<br><br>
+<br>
 <img src="screenshots/14-sample-eml-virustotal-details.png" width="750" alt="VirusTotal file details for sample.eml" />
-<br><br>
+
 
 #### 2. Payload Container (`quotation.iso`)
 - **VirusTotal Detection:** **20 out of 41 security vendors** flagged the extracted ISO attachment as a Trojan/Downloader.
@@ -165,8 +165,8 @@ All indicators are defanged for safe sharing:
 
 ## MITRE ATT&CK Mapping
 
-| Tactic | ID | Technique | Observed In | Evidence & Context |
-|---|---|---|---|---|
+| Tactic | ID | Technique
+|---|---|---
 | **Initial Access** | [T1566.001](https://attack.mitre.org/techniques/T1566/001/) | Phishing: Spearphishing Attachment
 | **Execution** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | User Execution: Malicious File
 | **Defense Evasion** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | Container Files
