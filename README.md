@@ -16,6 +16,7 @@
 - [MITRE ATT\&CK Coverage](#mitre-attck-coverage)
 - [Investigation Methodology](#investigation-methodology)
 - [IOC Report](#ioc-report)
+- [Blog Post](#blog-post)
 - [Disclaimer](#disclaimer)
 
 ---
@@ -177,6 +178,14 @@ Every case in this repository follows the same structured workflow:
 - Message-IDs for campaign correlation
 - Contextual indicators (legitimate infrastructure to NOT block)
 - Infrastructure mapping trees for each case
+
+---
+
+## Blog Post
+
+📝 Read the complete step-by-step investigation article published on Medium:
+
+👉 **[Dissecting a Malicious ISO Phishing Email — A Complete SOC Analyst Investigation](https://medium.com/@shasaanksridhar/dissecting-a-malicious-iso-phishing-email-a-complete-soc-analyst-investigation-b9eca2d17224)**
 
 ---
 
