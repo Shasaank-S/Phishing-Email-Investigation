@@ -37,6 +37,15 @@ The email failed sender authentication checks, contained character-level discrep
 
 ---
 
+## Evidence Preservation & Hashes
+
+Before analyzing the email structure, the raw `sample.eml` file was preserved and hashed in Kali Linux to establish chain of custody:
+
+<br>
+<img src="screenshots/01b-sample-eml-sha256-hash.png" width="750" alt="Generating sample.eml SHA-256 hash in Kali terminal" />
+
+---
+
 ## Header & Sender Analysis
 
 Examining the raw MIME headers in Thunderbird and parsing them via PhishTool and MXToolbox revealed several critical sender anomalies and authentication failures:
