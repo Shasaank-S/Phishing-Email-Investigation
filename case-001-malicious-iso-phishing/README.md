@@ -115,13 +115,20 @@ The email delivered a 112 KB file named `quotation.iso`.
 
 Querying both the raw `.eml` sample and extracted payload on VirusTotal yielded strong malicious consensus across security vendors:
 
-1. **Evidence File (`sample.eml`):** **33 out of 61 security vendors** flagged the raw email sample as malicious, tagging it under threat label `trojan.ejzz/androm` (Trojan.Agent.EJZZ, Win32:Trojan-gen).
+#### 1. Evidence File (`sample.eml`)
+- **VirusTotal Detection:** **33 out of 61 security vendors** flagged the raw email sample as malicious.
+- **Threat Classification:** `trojan.ejzz/androm` (Trojan.Agent.EJZZ, Win32:Trojan-gen).
+
 <br>
 <img src="screenshots/13-sample-eml-virustotal-detection.png" width="750" alt="VirusTotal detection for sample.eml (33/61 vendors)" />
 <br><br>
 <img src="screenshots/14-sample-eml-virustotal-details.png" width="750" alt="VirusTotal file details for sample.eml" />
-**2. **Payload Container (`quotation.iso`):** **20 out of 41 security vendors** flagged the extracted ISO attachment as a Trojan/Downloader.**
 <br><br>
+
+#### 2. Payload Container (`quotation.iso`)
+- **VirusTotal Detection:** **20 out of 41 security vendors** flagged the extracted ISO attachment as a Trojan/Downloader.
+
+<br>
 <img src="screenshots/09-virustotal-detection-results.png" width="750" alt="VirusTotal detection results for quotation.iso" />
 
 ---
