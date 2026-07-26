@@ -116,12 +116,11 @@ The email delivered a 112 KB file named `quotation.iso`.
 Querying both the raw `.eml` sample and extracted payload on VirusTotal yielded strong malicious consensus across security vendors:
 
 1. **Evidence File (`sample.eml`):** **33 out of 61 security vendors** flagged the raw email sample as malicious, tagging it under threat label `trojan.ejzz/androm` (Trojan.Agent.EJZZ, Win32:Trojan-gen).
-2. **Payload Container (`quotation.iso`):** **20 out of 41 security vendors** flagged the extracted ISO attachment as a Trojan/Downloader.
-
 <br>
 <img src="screenshots/13-sample-eml-virustotal-detection.png" width="750" alt="VirusTotal detection for sample.eml (33/61 vendors)" />
 <br><br>
 <img src="screenshots/14-sample-eml-virustotal-details.png" width="750" alt="VirusTotal file details for sample.eml" />
+**2. **Payload Container (`quotation.iso`):** **20 out of 41 security vendors** flagged the extracted ISO attachment as a Trojan/Downloader.**
 <br><br>
 <img src="screenshots/09-virustotal-detection-results.png" width="750" alt="VirusTotal detection results for quotation.iso" />
 
@@ -161,11 +160,11 @@ All indicators are defanged for safe sharing:
 
 | Tactic | ID | Technique | Observed In | Evidence & Context |
 |---|---|---|---|---|
-| **Initial Access** | [T1566.001](https://attack.mitre.org/techniques/T1566/001/) | Phishing: Spearphishing Attachment | Case 001 | Delivered a malicious `quotation.iso` container attachment via email |
-| **Execution** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | User Execution: Malicious File | Case 001 | Requires the victim to mount the ISO and execute the embedded Trojan payload |
-| **Defense Evasion** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | Container Files | Case 001 | Wrapping Windows `.exe` payload inside an ISO disk image to bypass gateway scanning |
-| **Defense Evasion** | [T1036](https://attack.mitre.org/techniques/T1036/) | Masquerading | Case 001 | Disguised malicious executable as a wire transfer invoice quotation from `Paol.Reggiani@moss[.]it` |
-| **Resource Development** | [T1584](https://attack.mitre.org/techniques/T1584/) | Compromised Infrastructure | Case 001 | Leveraging external business mail server (`mail.moss[.]it` / `213[.]227[.]154[.]65`) for dispatch |
+| **Initial Access** | [T1566.001](https://attack.mitre.org/techniques/T1566/001/) | Phishing: Spearphishing Attachment
+| **Execution** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | User Execution: Malicious File
+| **Defense Evasion** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | Container Files
+| **Defense Evasion** | [T1036](https://attack.mitre.org/techniques/T1036/) | Masquerading
+| **Resource Development** | [T1584](https://attack.mitre.org/techniques/T1584/) | Compromised Infrastructure
 
 ---
 
