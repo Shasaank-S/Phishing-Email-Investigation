@@ -89,16 +89,32 @@ The email delivered a 112 KB file named `quotation.iso`.
 <img src="screenshots/08-sha256-hash-generation.png" width="750" alt="SHA-256 hash generation terminal" />
 
 ### Cryptographic Hashes
-- **Evidence File (`sample.eml`) SHA-256:** `a4961eed55d234b1a6c5a9016bd81c04c27b620dffcd49ad44a3c9c7cc796039`
-- **Attachment (`quotation.iso`) SHA-256:** `75fdb848eac332b4ca7d88f497e7ba7ebbb9a798d825b28cf1f87b9d7149e87f`
-- **Attachment (`quotation.iso`) SHA-1:** `3fe45f8cd20cd7c63e55e3918dac1d3a0d7fb05a`
-- **Attachment (`quotation.iso`) MD5:** `6aef1d7f88e8aa450a0c604b4caee5ba`
 
-### Threat Intelligence & Static Reputation
-Querying the SHA-256 hash against VirusTotal yielded **20 out of 41 security vendor detections**, confirming the ISO contains a malicious Windows Trojan / Downloader executable.
+#### Evidence File (`sample.eml`)
+- **MD5:** `e1f968308b531d467a06c638d40c20d4`
+- **SHA-1:** `6213b442521e65124e9b0032a56c73b5e7095f3a`
+- **SHA-256:** `a4961eed55d234b1a6c5a9016bd81c04c27b620dffcd49ad44a3c9c7cc796039`
+
+#### Attachment Payload (`quotation.iso`)
+- **MD5:** `6aef1d7f88e8aa450a0c604b4caee5ba`
+- **SHA-1:** `3fe45f8cd20cd7c63e55e3918dac1d3a0d7fb05a`
+- **SHA-256:** `75fdb848eac332b4ca7d88f497e7ba7ebbb9a798d825b28cf1f87b9d7149e87f`
+
+---
+
+### Threat Intelligence & Reputation Analysis
+
+Querying both the raw `.eml` sample and extracted payload on VirusTotal yielded strong malicious consensus across security vendors:
+
+1. **Evidence File (`sample.eml`):** **33 out of 61 security vendors** flagged the raw email sample as malicious, tagging it under threat label `trojan.ejzz/androm` (Trojan.Agent.EJZZ, Win32:Trojan-gen).
+2. **Payload Container (`quotation.iso`):** **20 out of 41 security vendors** flagged the extracted ISO attachment as a Trojan/Downloader.
 
 <br>
-<img src="screenshots/09-virustotal-detection-results.png" width="750" alt="VirusTotal detection results" />
+<img src="screenshots/13-sample-eml-virustotal-detection.png" width="750" alt="VirusTotal detection for sample.eml (33/61 vendors)" />
+<br><br>
+<img src="screenshots/14-sample-eml-virustotal-details.png" width="750" alt="VirusTotal file details for sample.eml" />
+<br><br>
+<img src="screenshots/09-virustotal-detection-results.png" width="750" alt="VirusTotal detection results for quotation.iso" />
 
 ---
 
