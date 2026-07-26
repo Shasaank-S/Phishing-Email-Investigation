@@ -42,9 +42,9 @@ Every investigation covers:
 
 | # | Case | Attack Type | Verdict | Severity | Write-Up |
 |---|------|------------|---------|----------|----------|
-| 001 | [Malicious ISO Attachment Phishing](case-001-malicious-iso-phishing/) | Malware delivery via ISO disk image | 🔴 Malicious | High | [Read →](case-001-malicious-iso-phishing/README.md) |
-| 002 | [Amazon Account-Lock Phishing](case-002-amazon-account-lock-phishing/) | Credential harvesting via phishing link | 🔴 Phishing | High | [Read →](case-002-amazon-account-lock-phishing/README.md) |
-| 003 | [Bradesco Livelo Points Phishing](case-003-bradesco-livelo-phishing/) | Brand impersonation via phishing link | 🔴 Phishing | High | [Read →](case-003-bradesco-livelo-phishing/README.md) |
+| 001 | [Malicious ISO Attachment Phishing](case-001-malicious-iso-phishing/) | Malware delivery via ISO disk image | Malicious | High | [Read →](case-001-malicious-iso-phishing/README.md) |
+| 002 | [Amazon Account-Lock Phishing](case-002-amazon-account-lock-phishing/) | Credential harvesting via phishing link | Phishing | High | [Read →](case-002-amazon-account-lock-phishing/README.md) |
+| 003 | [Bradesco Livelo Points Phishing](case-003-bradesco-livelo-phishing/) | Brand impersonation via phishing link | Phishing | High | [Read →](case-003-bradesco-livelo-phishing/README.md) |
 
 ### Quick Comparison
 
@@ -54,7 +54,6 @@ Every investigation covers:
 | Brand impersonated | Business/Invoice | Amazon | Bradesco/Livelo |
 | Authentication | SPF fail, no DKIM, DMARC fail | No SPF record, DKIM neutral | SPF temperror, no DKIM, DMARC temperror |
 | Attachment | `quotation.iso` (20/41 VT detections) | None | None |
-| Sandbox used | ANY.RUN | N/A | N/A |
 | Key technique | ISO disk-image malware delivery | Typosquatted domain + Safe Links wrapping | VPS-generated email + Base64-encoded body |
 
 ---
