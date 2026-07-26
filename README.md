@@ -113,13 +113,15 @@ Every investigation covers:
 
 ## MITRE ATT&CK Coverage
 
-| Technique ID | Technique Name | Observed In |
-|---|---|---|
-| [T1566.001](https://attack.mitre.org/techniques/T1566/001/) | Phishing: Spearphishing Attachment | Case 001 |
-| [T1566.002](https://attack.mitre.org/techniques/T1566/002/) | Phishing: Spearphishing Link | Case 002, Case 003 |
-| [T1204.001](https://attack.mitre.org/techniques/T1204/001/) | User Execution: Malicious Link | Case 002, Case 003 |
-| [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | User Execution: Malicious File | Case 001 |
-| [T1036](https://attack.mitre.org/techniques/T1036/) | Masquerading | Case 001, Case 002, Case 003 |
+| Tactic | ID | Technique | Observed In | Evidence & Context |
+|---|---|---|---|---|
+| **Initial Access** | [T1566.001](https://attack.mitre.org/techniques/T1566/001/) | Phishing: Spearphishing Attachment | Case 001 | Inbound email delivering malicious `quotation.iso` attachment |
+| **Initial Access** | [T1566.002](https://attack.mitre.org/techniques/T1566/002/) | Phishing: Spearphishing Link | Case 002, Case 003 | Inbound emails delivering typosquatted Amazon & Bradesco credential harvesting links |
+| **Execution** | [T1204.001](https://attack.mitre.org/techniques/T1204/001/) | User Execution: Malicious Link | Case 002, Case 003 | Coercing victims to click embedded phishing URLs ("Review Account", "Redeem Points") |
+| **Execution** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | User Execution: Malicious File | Case 001 | Mounting `.iso` disk image and executing embedded Windows Trojan executable |
+| **Defense Evasion** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | Container Files | Case 001 | Wrapping executable payload inside ISO container to bypass email gateway filters |
+| **Defense Evasion** | [T1036](https://attack.mitre.org/techniques/T1036/) | Masquerading | Case 001, Case 002, Case 003 | Impersonating trusted brands (Moss.it, Amazon, Banco Bradesco / Livelo) |
+| **Resource Development** | [T1584](https://attack.mitre.org/techniques/T1584/) | Compromised Infrastructure | Case 001, Case 003 | Leveraging compromised business mail servers (`moss.it`) & DigitalOcean VPS droplets |
 
 ---
 

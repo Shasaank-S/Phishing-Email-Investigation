@@ -140,11 +140,11 @@ All indicators are defanged for safe sharing:
 
 ## MITRE ATT&CK Mapping
 
-| Technique | ID | Evidence & Context |
-|---|---|---|
-| Spearphishing Link | [T1566.002](https://attack.mitre.org/techniques/T1566/002/) | Delivered typosquatted Amazon link via email |
-| User Execution: Malicious Link | [T1204.001](https://attack.mitre.org/techniques/T1204/001/) | Coerced recipient to click Review Account button |
-| Masquerading | [T1036](https://attack.mitre.org/techniques/T1036/) | Used Amazon branding, logo, and look-alike subdomain |
+| Tactic | ID | Technique | Observed In | Evidence & Context |
+|---|---|---|---|---|
+| **Initial Access** | [T1566.002](https://attack.mitre.org/techniques/T1566/002/) | Phishing: Spearphishing Link | Case 002 | Delivered typosquatted Amazon link wrapped in Microsoft Safe Links protection |
+| **Execution** | [T1204.001](https://attack.mitre.org/techniques/T1204/001/) | User Execution: Malicious Link | Case 002 | Coercing recipient to click "Review Account" button to unlock account |
+| **Defense Evasion** | [T1036](https://attack.mitre.org/techniques/T1036/) | Masquerading | Case 002 | Used Amazon logos, look-alike domain `amaozn[.]zzyuchengzhika[.]cn`, and display name spoofing |
 
 ---
 

@@ -131,11 +131,12 @@ All indicators are defanged for safe sharing:
 
 ## MITRE ATT&CK Mapping
 
-| Technique | ID | Evidence & Context |
-|---|---|---|
-| Spearphishing Link | [T1566.002](https://attack.mitre.org/techniques/T1566/002/) | Delivered external links disguised as Livelo point redemption |
-| User Execution: Malicious Link | [T1204.001](https://attack.mitre.org/techniques/T1204/001/) | Relies on user clicking Redeem Now or Click Here |
-| Masquerading | [T1036](https://attack.mitre.org/techniques/T1036/) | Impersonated Bradesco Bank and Livelo rewards program |
+| Tactic | ID | Technique | Observed In | Evidence & Context |
+|---|---|---|---|---|
+| **Initial Access** | [T1566.002](https://attack.mitre.org/techniques/T1566/002/) | Phishing: Spearphishing Link | Case 003 | Delivered external links disguised as Portuguese Livelo point redemption |
+| **Execution** | [T1204.001](https://attack.mitre.org/techniques/T1204/001/) | User Execution: Malicious Link | Case 003 | Relies on victim clicking "Redeem Now" button to harvest banking credentials |
+| **Defense Evasion** | [T1036](https://attack.mitre.org/techniques/T1036/) | Masquerading | Case 003 | Impersonated Banco Bradesco and Livelo rewards program |
+| **Resource Development** | [T1584](https://attack.mitre.org/techniques/T1584/) | Compromised Infrastructure | Case 003 | Dispatching email via root user on DigitalOcean VPS droplet (`ubuntu-s-1vcpu...` / `137.184.34.4`) |
 
 ---
 

@@ -150,11 +150,13 @@ All indicators are defanged for safe sharing:
 
 ## MITRE ATT&CK Mapping
 
-| Technique | ID | Evidence & Context |
-|---|---|---|
-| Spearphishing Attachment | [T1566.001](https://attack.mitre.org/techniques/T1566/001/) | Delivered a malicious ISO container attachment via email |
-| User Execution: Malicious File | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | Requires the victim to mount the ISO and execute the payload |
-| Masquerading | [T1036](https://attack.mitre.org/techniques/T1036/) | Disguised malicious executable as an invoice quotation |
+| Tactic | ID | Technique | Observed In | Evidence & Context |
+|---|---|---|---|---|
+| **Initial Access** | [T1566.001](https://attack.mitre.org/techniques/T1566/001/) | Phishing: Spearphishing Attachment | Case 001 | Delivered a malicious `quotation.iso` container attachment via email |
+| **Execution** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | User Execution: Malicious File | Case 001 | Requires the victim to mount the ISO and execute the embedded Trojan payload |
+| **Defense Evasion** | [T1204.002](https://attack.mitre.org/techniques/T1204/002/) | Container Files | Case 001 | Wrapping Windows `.exe` payload inside an ISO disk image to bypass gateway scanning |
+| **Defense Evasion** | [T1036](https://attack.mitre.org/techniques/T1036/) | Masquerading | Case 001 | Disguised malicious executable as a wire transfer invoice quotation from `Paol.Reggiani@moss[.]it` |
+| **Resource Development** | [T1584](https://attack.mitre.org/techniques/T1584/) | Compromised Infrastructure | Case 001 | Leveraging external business mail server (`mail.moss[.]it` / `213[.]227[.]154[.]65`) for dispatch |
 
 ---
 
