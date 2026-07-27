@@ -38,11 +38,19 @@ Header analysis proved the email did not originate from Bradesco, but was genera
 | **Authentication** | SPF=Temperror, DKIM=None, DMARC=Temperror |
 | **Primary Vector** | Embedded Phishing Link |
 
+<br>
+<img src="screenshots/02-email-body-original.png" width="750" alt="Redacted — Original phishing email body (brand content removed at trademark holder request)" />
+
 ---
 
 ## Header & Infrastructure Analysis
 
 Inspecting the raw MIME headers identified critical infrastructure mismatches and server-level fingerprints:
+
+<br>
+<img src="screenshots/04-email-headers-raw.png" width="750" alt="Raw email headers" />
+<br><br>
+<img src="screenshots/05-mxtoolbox-header-analysis.png" width="750" alt="MXToolbox header analysis" />
 
 ### 1. Envelope Return-Path & VPS Fingerprint
 - **Visible Sender:** `banco.bradesco@atendimento[.]com[.]br`
@@ -61,6 +69,9 @@ User ID `0` corresponds to the Linux `root` account, demonstrating that Postfix 
 - **Originating IP:** `137[.]184[.]34[.]4`
 - **Autonomous System:** `AS14061 – DigitalOcean, LLC`
 
+<br>
+<img src="screenshots/09-virustotal-ip-check.png" width="750" alt="VirusTotal IP reputation check for 137.184.34.4" />
+
 ### 4. Authentication & Microsoft Telemetry Results
 - **SPF:** `temperror` — DNS query timeout/temporary error during evaluation.
 - **DKIM:** `none` — No DKIM signature present.
@@ -68,15 +79,11 @@ User ID `0` corresponds to the Linux `root` account, demonstrating that Postfix 
 - **Microsoft Antispam Score:** `X-MS-Exchange-Organization-SCL: 5` (Spam Confidence Level 5), `BCL: 9` (Bulk Complaint Level 9), marking it as unauthenticated bulk spam.
 
 <br>
-<img src="screenshots/02-email-body-original.png" width="750" alt="Redacted — Original phishing email body (brand content removed at trademark holder request)" />
-<br><br>
-<img src="screenshots/04-email-headers-raw.png" width="750" alt="Raw email headers" />
-<br><br>
-<img src="screenshots/05-mxtoolbox-header-analysis.png" width="750" alt="MXToolbox header analysis" />
-<br><br>
 <img src="screenshots/06-spf-dkim-results.png" width="750" alt="SPF and DKIM authentication results" />
 <br><br>
 <img src="screenshots/07-powerdmarc-analysis.png" width="750" alt="PowerDMARC analysis" />
+<br><br>
+<img src="screenshots/08-powerdmarc-detailed.png" width="750" alt="PowerDMARC detailed results — SPF Not Aligned, DKIM Not Aligned" />
 
 ---
 
