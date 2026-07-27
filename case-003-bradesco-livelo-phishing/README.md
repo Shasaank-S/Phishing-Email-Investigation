@@ -2,11 +2,14 @@
 
 [← Back to Main Repository](../README.md)
 
+> [!NOTE]
+> **Redaction Notice:** Certain brand-specific content (email body screenshots, exact subject line text, and the raw `.eml` sample) have been redacted at the request of the trademark holder. All Indicators of Compromise, header analysis, infrastructure mapping, MITRE ATT&CK techniques, and investigative methodology remain intact for educational reference.
+
 ---
 
 ## Case Summary
 
-This investigation analyzed a sophisticated brand-impersonation phishing email targeting customers of Banco Bradesco and the Livelo rewards program. The email claimed that the recipient had **92,990 points expiring that day**, coercing them into clicking a link to redeem their points before forfeiture.
+This investigation analyzed a sophisticated brand-impersonation phishing email targeting customers of a major Brazilian bank and its associated loyalty rewards program. The email used urgency-based social engineering — claiming the recipient had a large number of loyalty points expiring that same day — to coerce them into clicking a link to "redeem" their points before forfeiture.
 
 Header analysis proved the email did not originate from Bradesco, but was generated on a minimal DigitalOcean Linux VPS running Postfix as root. The decoded HTML payload routed victims to an unrelated external domain (`blog1seguimentmydomaine2bra[.]me`) designed for credential or payment information theft.
 
@@ -25,7 +28,7 @@ Header analysis proved the email did not originate from Bradesco, but was genera
 
 | Field | Value |
 |---|---|
-| **Subject** | `CLIENTE PRIME - BRADESCO LIVELO: Seu cartão tem 92.990 pontos LIVELO expirando hoje!` |
+| **Subject** | *(Redacted)* — Portuguese-language subject line claiming the recipient's credit card had loyalty points expiring that day, using brand impersonation of Bradesco and Livelo |
 | **Claimed Sender** | BANCO DO BRADESCO LIVELO |
 | **Sender Address** | `banco.bradesco@atendimento[.]com[.]br` |
 | **Return-Path** | `root@ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06` |
@@ -65,9 +68,7 @@ User ID `0` corresponds to the Linux `root` account, demonstrating that Postfix 
 - **Microsoft Antispam Score:** `X-MS-Exchange-Organization-SCL: 5` (Spam Confidence Level 5), `BCL: 9` (Bulk Complaint Level 9), marking it as unauthenticated bulk spam.
 
 <br>
-<img src="screenshots/02-email-body-original.png" width="750" alt="Phishing email body original" />
-<br><br>
-<img src="screenshots/03-email-body-translated.png" width="750" alt="Phishing email body translated" />
+<img src="screenshots/02-email-body-original.png" width="750" alt="Redacted — Original phishing email body (brand content removed at trademark holder request)" />
 <br><br>
 <img src="screenshots/04-email-headers-raw.png" width="750" alt="Raw email headers" />
 <br><br>
