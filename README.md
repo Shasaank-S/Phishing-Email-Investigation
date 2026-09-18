@@ -206,7 +206,7 @@ Every case in this repository follows the same structured workflow:
 
 ## Author
 
-**Shasaank Sridhar** — Cybersecurity Analyst & Security Researcher
+**Shasaank Sridhar**
 
 - 🌐 [shasaanksridhar.me](https://shasaanksridhar.me)
 - 💼 [LinkedIn](https://linkedin.com/in/shasaank-sridhar)
